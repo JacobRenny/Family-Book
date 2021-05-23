@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>My Family Book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <center>
+      <div>
+        <h1>My Family Book</h1>
+        <img id="photo" src="https://en.islcollective.com/preview/201701/f/my-family-book-classroom-posters-flashcards-picture-dictionaries_94438_1.jpg" />
+        <br />
+        <br />
+        <label id="Name_Display"></label>
+        <br />
+        <br />
+        <button id="next_button" onclick="next_member()">Next</button>
+      </div>
+    </center>
+
+    <script>
+      var names = [
+        "Issac Abraham Renny",
+        "Jacob Varghese Renny",
+        "Stephen Joseph Renny",
+        "Renny Manak",
+        "Manju Renny",
+      ];
+
+      var images = [
+        "Issac.png",
+        "Jacob .png",
+        "Stephen.png",
+        "Appa.png",
+        "Mamma.png",
+      ];
+
+      var i = 0;
+      function next_member() {
+        document.getElementById("photo").src = images[i];
+        document.getElementById("Name_Display").innerHTML = names[i];
+        i++;
+
+        if (i == 5) {
+          i = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
